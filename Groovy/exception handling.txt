@@ -1,0 +1,21 @@
+package switchOperations
+
+class ExceptionHandling {
+	static void main(String[] args) {
+		def a=10
+		def b=0
+		try	{
+			def div=a/b
+			println div
+		}
+		catch(NullPointerException e)	{
+			println "Exception Occured 1"
+		}
+		catch(Exception e)	{
+			println "Exception Occured 2"
+		}
+		finally	{
+			println "In Finally"
+		}
+	}
+}

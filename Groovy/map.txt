@@ -1,0 +1,30 @@
+//def map=[:]
+//log.info map
+def map1=[name:'SEENU',AGE:26]
+log.info map1.name
+
+def person=[name:'SREENU', age: 30]
+log.info person.name
+log.info person.age
+log.info person["class"]
+
+
+/*
+//log.info "Name : ${map1.Name}"
+map1.add(sal:499)
+log.info map1
+map1<<[price:150]
+//log.info "${map1.Name}"
+//log.info map1-[Name='SREENU']
+log.info map1
+def map2 = [p1:100, p2:200, p3:300, p4:400, p5:500]
+log.info  "${map2.keySet()}"
+log.info "${map2.values()}"
+log.info "${map2.max{it.key}}"
+log.info "$map2.max{it.value()}"
+ */
+
+def person=[name:'SREENU', age: 30]
+log.info person.name
+log.info person.age
+log.info person["class"]

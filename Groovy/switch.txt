@@ -1,0 +1,113 @@
+
+
+def arg1 = 20;
+
+def arg2 = 10;
+
+def result = 0;
+
+def operation = "ttt"
+
+switch(operation) {
+	case "add":
+      result = arg1+arg2
+       break;     
+	case "sub":
+       result = arg1-arg2
+       break;     
+	case "mul":
+     result = arg1*arg2
+       break;     
+	case "div":
+     result = arg1/arg2
+       break;     
+	default:
+	  log.info "Please select one of theese operations 'add', 'sub'  "
+	}
+
+log.info "Expected result"
+log.info result
+
+
+
+
+======================================
+
+
+
+
+def result = 0;
+
+
+def get_result(operation) {
+	def arg1 = 20;
+	
+	def arg2 = 10;
+	
+	switch(operation) {
+		case "add":
+	      result = arg1+arg2
+	       break;     
+		case "sub":
+	       result = arg1-arg2
+	       break;     
+		case "mul":
+	     result = arg1*arg2
+	       break;     
+		case "div":
+	     result = arg1/arg2
+	       break;     
+		default:
+		  log.info "Please select one of theese operations 'add', 'sub'  "
+		}
+}
+
+}
+
+log.info get_result("add")
+log.info get_result("sub")
+log.info get_result("mul")
+log.info get_result("div")
+
+
+
+-------------------------------------------------------------
+
+
+
+def get_result(operation, arg1, arg2) {
+	switch(operation) {
+		case "add":
+	      result = arg1+arg2
+	       break;     
+		case "sub":
+	       result = arg1-arg2
+	       break;     
+		case "mul":
+	     result = arg1*arg2
+	       break;     
+		case "div":
+	     result = arg1/arg2
+	       break;     
+		default:
+		  log.info "Please select one of theese operations 'add', 'sub'  "
+		}
+}
+
+
+//
+
+def ui = com.eviware.soapui.support.UISupport;
+String operation =ui.prompt("Please enter Operation","Data getter");
+Integer arg1 =ui.prompt("Please enter argument1 value","Data getter").toInteger();
+Integer  arg2 =ui.prompt("Please enter argument2 value","Data getter").toInteger();
+
+log.info operation;
+log.info arg1;
+log.info arg2;
+ get_result(operation, arg1, arg2);
+
+
+
+
+

@@ -1,0 +1,68 @@
+log.info "Range ===> can be delcared using .. or ..<"
+
+
+//log.info "this is test"
+//log.error "this is error"
+//
+//(1..100).each{it->
+//	log.info it
+//}
+//
+//(100..1).each{it->
+//log.info it
+//}
+
+//(1..7).collect{it}
+
+def myrange=1..5
+log.info "myrange class: ${myrange.class}"
+log.info "contents are: ${myrange}"
+log.info "first element  ${myrange[0]}"
+log.info "second element: ${myrange[1]}"
+log.info "third element: ${myrange[2]}"
+log.info "Fourth element: ${myrange[3]}"
+log.info "fifth element:${myrange[4]}"
+log.info "Ranage size: ${myrange.size()}"
+log.info "range contains: ${myrange.contains(5)}"
+log.info "ranage get value: ${myrange.get(1)}"
+log.info "ranage containsall:${myrange.containsAll([2,4])}"
+log.info "index of element :${myrange.indexOf(2)}"
+log.info "isempty: ${myrange.isEmpty()}"
+
+log.info "using for loop"
+def range=1..100
+for(n in range)
+{
+	log.info n
+}
+
+log.info "using Groovy each"
+def range1=1..100
+range1.each{n->
+log.info n
+}
+
+def range3=1..100
+log.info "range3 values: ${range3}"
+def range4=100..1
+log.info "range4 values ${range4}"
+def range5=(1..100).step(2)
+log.info "ODD numbers:${range5}"
+def range6=(2..100).step(2)
+log.info "Even numbers.${range6}"
+def range7=(1..100).step(3)
+log.info "range7 ${range7}"
+
+log.info "half open int rage"
+def range8=1..<5
+log.info "range8: ${range8}"
+
+log.info "Groovy object Range"
+
+def ran='a'..'d'
+log.info "ran: ${ran}"
+
+def ran1=1.5..5
+log.info "class: ${ran1.class}"
+
+(1..5).collect{it*0.5}

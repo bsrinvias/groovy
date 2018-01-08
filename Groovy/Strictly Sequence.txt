@@ -1,0 +1,15 @@
+num=231
+num_ary = num.toString().collect{ it.toInteger()  }
+def is_valid=true;
+
+ for(i=0;i<num_ary.size-1;i++) {
+
+   cur_ele_inc = num_ary[i] + 1
+   next_ary_ele = num_ary[i+1]
+
+   is_valid =((num_ary[i] < next_ary_ele) && (cur_ele_inc  == next_ary_ele))
+  if(is_valid == false)
+     break
+ } 
+
+ log.info is_valid

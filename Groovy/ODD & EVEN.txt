@@ -1,0 +1,18 @@
+//Recursive function
+//def f(n)
+//{n%2==0? 'EVEN' : 'ODD'}
+//f(4)
+
+//for loop
+//def A=100
+//if(A%2==0)
+//{
+//	log.info "EVEN"
+//}
+//else
+//{
+//	log.info "ODD"
+//}
+
+A=1..100
+log.info A

@@ -1,0 +1,2 @@
+def name='ABA'
+name[-1..0] == name[0..-1]

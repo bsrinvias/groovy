@@ -1,0 +1,74 @@
+ def map=[
+   1:"Sunday",
+   2:"Monday",
+   3:"Tuesday",
+   4:"Wednesday",
+   5:"Thursday",
+   6:"Friday",
+   7:"Saturday"]
+ 
+def day_no = Date.parse("yyyy-MM-dd", "2018-01-24")[Calendar.DAY_OF_WEEK]
+
+ log.info map[day_no]
+
+-----------------------------------------------------------------------
+ 
+ def WEEK_DAYS =["Monday","Tuesday", "Wednesday", "Thursday", "Friday"]
+def WEEK_ENDS = ["Saturday", "Sunday"]
+
+
+ day = "monday"
+
+ if(day in WEEK_DAYS){
+ 	 log.info "Happy Working Day!"
+ 	} else if(day in WEEK_ENDS) {
+ 		  log.info  "Enjoy Holiday"
+	}else{
+		log.info "Sorry Invalid Day"
+		
+	}
+	
+	----------------------------------------------------------------------
+	 def map=[
+  "Sunday" : 1,
+   "Monday" :2,
+   "Tuesday" :3,
+   "Wednesday":4,
+   "Thursday":5,
+   "Friday":6,
+   "Saturday":7]
+ 
+  day = "Tuesday"
+ day_no = map[day]
+ log.info day_no
+switch(day_no){
+
+	case 2..6 :
+	  log.info "Happy Working day"
+	  break;
+
+	case [1,7] :
+	  log.info "Happy Holiday "
+	  break;
+
+	  default:
+	    log.info "Invalid Day"
+	    break;
+	}
+------------------------------------
+  day = "Sunday"
+
+switch(day){
+
+	case [ "Monday" , "Tuesday"  ] :
+	  log.info "Happy Working day"
+	  break;
+
+	case ["Sunday" , "Saturday"] :
+	  log.info "Happy Holiday "
+	  break;
+
+	  default:
+	    log.info "Invalid Day"
+	    break;
+	}

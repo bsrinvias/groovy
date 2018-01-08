@@ -1,0 +1,2 @@
+//def val={int b-> b**2}
+//log.info "4 square is : "+val(4) // normal Parameter

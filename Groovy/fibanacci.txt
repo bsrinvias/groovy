@@ -1,0 +1,30 @@
+//fibonnaci Series
+
+def f(n) {
+	n<2?n:f(n-2)+f(n-1)
+}
+f(n)
+
+
+
+//fibonnaci Series for sequence
+def f(n) {
+	n<2?n:f(n-2)+f(n-1)
+}
+(1..4).each{n->
+  log.info  f(n)
+}
+
+
+
+//fibonnaci Series with sum
+
+def f(n) {
+	n<2?n:f(n-2)+f(n-1)
+}
+def sum = 0
+(1..4).each{n->
+  sum +=  f(n)
+}
+
+log.info sum

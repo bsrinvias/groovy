@@ -1,0 +1,47 @@
+import groovy.json.*
+class GpathJason {
+
+	static main(args) 
+		{
+		def text1='''{"id": "5a4c88509de11f6e7b850856",
+			"name": "BOARD_12_21_1",
+			"desc": "",
+			"descData": null,
+			"closed": false,
+			"idOrganization": null,
+			"pinned": false,
+			"url": "https://trello.com/b/7u9N5PZ6/board12211",
+			"shortUrl": "https://trello.com/b/7u9N5PZ6"}'''
+			
+		
+		def json = new JsonSlurper().parseText(text1)
+		def theNode = json.name
+		 "theNode"
+	}
+
+
+}
+
+---------------------
+
+import groovy.json.*
+import groovy.json.JsonOutput
+class GpathJason {
+
+	public static void main(String [] args) 
+		{
+		def text1='''{"employee":{"id":123,"name":"seenu","age":26,"sal":33343,"cars":["BMW","SKODA"],"address":{ "city":"hyd", "state":"Telagana"}}}'''
+		
+		 
+		def json=new JsonSlurper().parseText(text1)
+		println "employee address: $json.employee.address.city"
+		
+//		def jsonSlurper = new JsonSlurper(type: JsonParserType.INDEX_OVERLAY)
+//		def object = jsonSlurper.parseText('{ "myList": [4, 8, 15, 16, 23, 42] }')
+		
+//		def json1 = JsonOutput.toJson([name: 'seenu', age: 42])
+		def json2 = JsonOutput.toJson([name: 'John Doe'])
+		println JsonOutput.prettyPrint(json2)
+	}
+
+}

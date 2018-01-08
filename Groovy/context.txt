@@ -1,0 +1,14 @@
+import groovy.json.JsonSlurper
+//context -
+def project = context.testCase.testSuite.project 
+def testStep = project.getTestSuiteAt(0).getTestCaseAt(0).getTestStepAt(0)
+def responseData = testStep.getProperty('Response');
+//log.info(responseData.value)
+def root = new JsonSlurper().parseText(responseData.value)
+log.info(root.id)
+def testStep2 = project.getTestSuiteAt(0).getTestCaseAt(0).getTestStepAt(2)
+testStep2.setPropertyValue("BOARDID", root.id )
+//log.info(testStep2.getProperty("BOARDID")) 
+log.info root.name
+assert root.name=="First2"
+

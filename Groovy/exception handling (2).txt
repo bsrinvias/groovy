@@ -1,0 +1,23 @@
+package switchOperations
+
+class ExceptionHandling {
+	static void main(String[] args){
+		
+		def a=10
+		def b=0
+	
+		try{
+				def result=a/b
+		
+	println result
+		}
+		catch(Exception e)
+		{
+			println "this is eror"
+		}
+		finally{
+			println "error"
+		}
+	}
+	
+}

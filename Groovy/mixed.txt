@@ -1,0 +1,102 @@
+def String='Sreenu'
+def Integer=4628342
+def list=['ABC','SREENU','VASU','RAJ','KIRAN',,'RAJ','KIRAN']
+def map=[NAME='SREENU',AGE='AB']
+
+
+log.info String
+log.info Integer
+log.info list
+log.info map
+
+log.info String.toLowerCase()
+log.info list.collect{it.toLowerCase()}
+log.error "map to lower case"
+
+log.info String.toUpperCase()
+log.info list.collect{it.toUpperCase()}
+log.error "map to upper case"
+
+
+log.info String.reverse()
+log.info list.reverse()
+log.info list.collect{it.reverse()}
+
+log.info String.collect{it}.sort()
+log.info list.sort()
+
+log.info String.size()
+log.info list.size()
+
+//String ='ABCDEF'
+list=['AA','BB','CC']
+map=[name:'Sreenu',age:26]
+
+log.info list[0]
+list.add('DD')
+log.info list
+list.remove('BB')
+log.info list
+
+log.info map
+log.info map.name
+map<<[sal:499]
+log.info map
+map.remove('age')
+log.info map
+
+------------------------------
+log.info "usefule"
+def name='Sreenu'
+def list=['Sreenu','vasu','Raj','vasu','Raj']
+def map=[1:'Sreenu',2:'vasu',3:'Raj',4:'vasu',5:'Raj']
+def queue=['Sreenu','vasu','Raj','vasu','Raj'] as Queue
+def set=['Sreenu','vasu','Raj','vasu','Raj'] as Set
+
+log.error "display all values"
+//log.info name
+//log.info list
+//log.info map
+//log.info queue
+//log.info set
+
+log.error "Get first values"
+//log.info list[0]
+//log.info map[1]
+//log.info queue[0]
+//log.info set[0]
+
+log.error "Add  values"
+//log.info list<<"Verma"
+//log.info map<<[6:'verma']
+//log.info queue<<"verma"
+//log.info set<<"verma"
+
+log.error  "remove one value"
+//log.info list.remove('vasu')
+//log.info map.remove(4)
+//log.info queue.remove('vasu')
+//log.info set.remove('vasu')
+
+log.info list.remove(0)
+
+log.error is empty
+log.info list.empty
+//log.info map.empty
+//log.info queue.empty
+//log.info set.empty
+
+log.error "retain all"
+//list.retainAll ()
+//map.retainAll ()
+//queue.retainAll ()
+//set.retainAll ()
+
+log.error "set operations --add or remove last values"
+set.push('F')
+set.pop()
+
+log.error "queue  operations add or remove first values"
+set.push('F')
+set.pop()
+

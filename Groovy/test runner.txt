@@ -1,0 +1,18 @@
+//Test Runner
+import groovy.json.JsonSlurper
+def request = testRunner.testCase.getTestStepByName("REST Request");
+def responseData = request.getProperty('Response');
+log.info(responseData.value)
+
+def project = context.testCase.testSuite.project
+log.info(project.name +"  "+ project)
+def testSuite = project.getTestSuiteAt(0)  // 1 is the index number of testsuite
+log.info(testSuite.name +"  "+ testSuite)
+def testCase = testSuite.getTestCaseAt(0)  // 1 is the index number of testcase
+log.info(testCase.name +"  "+ testCase)
+def testStep = testCase.getTestStepAt(0) // 3 is the index number of teststep
+log.info(testStep.name +"  "+ testStep) 
+def root = new JsonSlurper().parseText(responseData.value)
+log.info(root.id)
+def testStep2 = project.getTestSuiteAt(0).getTestCaseAt(0).getTestStepAt(2)
+testStep2.setPropertyValue("BOARDID", root.id )

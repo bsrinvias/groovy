@@ -1,0 +1,114 @@
+/*
+  * arry list
+  * Linked list
+ * vector list
+ */
+
+
+def myList=[]
+myList.class
+
+def mylist1=['Aero','Bero','Cero','Dero']
+log.info mylist1.size()
+//Retrieve values from Array
+log.info mylist1[0]
+log.info mylist1[1]
+log.info mylist1[2]
+log.info mylist1[3]
+//Add elements to the array
+
+mylist1<<'E'
+//To see all the elements in the array
+log.info mylist1
+mylist1.add('F')
+log.info mylist1
+
+//remove element
+
+mylist1.remove('A')
+log.info mylist1
+mylist1.remove(1)
+mylist1-='E'
+
+
+//count of times
+
+mylist1.count('Aero')
+log.info mylist1.count{it=='Aero'}
+log.info mylist1.count{it.startsWith('A')}
+
+log.info mylist1
+log.info mylist1.take(2)
+log.info mylist1
+//log.info mylist1.take(0)
+
+mylist1.drop(1)
+log.info mylist1
+
+mylist1.push('H')
+log.info mylist1
+mylist1.pop()
+log.info mylist1
+
+
+//mylist1.collect{'hi'*it}
+//log.info mylist1
+
+def myList2 = [4, 5, [10, 13], 1, 2, 3, [15, 16]]
+log.info myList2.flatten()
+
+def myList3 = ["Apple", "Banana", "Carrot"]
+def joinResult = myList3.join(",")
+log.info joinResult
+
+def List3=[]
+log.info List3 
+log.info List3.class
+List3.add(1)
+List3.add(2)
+List3<<3
+log.info List3
+log.info List3.size()
+log.info List3[0]
+log.info List3[1]
+//Remove
+log.info List3.remove(2)
+log.info List3 -=1
+
+ def List=['AA','BB','AA','CC','DD','DD','FF','JJ','JJ']
+ log.info List
+ log.info List.countBy{it}
+ log.info List.count('AA')
+ log.info List.count{it=="AA"}
+ log.info List.count{it.startsWith("A")}
+
+ def List1=[1,2,3,4,5,6,7,8,9,10]
+ log.info List1
+ log.info List1.count{it>6}
+ log.info List1.take(3)
+ log.info List1.drop(3)
+ log.info List1.push(11)
+ log.info List1
+ log.info List1.pop()
+ log.info List1
+
+ log.info List.collect{"Hi" +it}
+ log.info List1.collect{2*it}
+ log.info List1.sort()
+ log.info List1.sort().reverse()
+ def List2=[1,2,[4,3,2],3,5,3,[5,6]]
+ log.info List2
+ log.info List2.flatten()
+ log.info List1.join()
+ log.info List.join(',')
+
+ def list=[4,5,16,53,2,5]
+//log.info list.sort()
+//log.info list.get(2)
+//log.info list[2]
+//log.info list.getClass()
+//list.putAt(2,10)
+log.info list
+//list.clear()
+list.size()
+list.sort().reverse()

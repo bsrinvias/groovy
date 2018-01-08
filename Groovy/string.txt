@@ -1,0 +1,44 @@
+def A='sreenu'
+def B='This is text'
+def C='A'..'z'
+def D='z'..'A'
+
+
+log.info A
+log.info B
+log.info C
+log.info D
+log.info "upper case"  + A.toUpperCase()
+log.info "Lower Case"  +A.toLowerCase()
+log.info "reverse" +A.reverse()
+log.info "Separate characters" +A.toList()
+log.info "Separate characters" +A.collect{it}
+log.info "unique characters" +A.collect{it}.unique().join()
+log.info "sort characters" +A.collect{it}.sort()
+log.info "sort characters in reverse order " +A.collect{it}.sort().reverse()
+log.info A[0]
+log.info A[1]
+log.info A[2]
+log.info A.collect{it}.first()
+log.info A.collect{it}.last()
+log.info A.size()
+log.info A.length()
+log.info A.substring(2)
+log.info A.indexOf('e')
+log.info A.replace('e','Z')
+log.info B.tokenize()
+log.info A.find{it>'e'}
+log.info A.findAll{it>='e'}
+log.info A.any{it>'e'}
+log.info A.every{it>'d'}
+log.info A.collect{'test-' + it}
+log.info A.take(1)
+log.info A.drop(1)
+log.info A.toSet()
+log.info A.collect{it}.max()
+log.info A.collect{it}.min()
+
+
+
+
+

@@ -1,0 +1,4 @@
+Set stringset=['apple','aaple','bana']
+log.info stringset.size()
+log.info stringset
+log.info stringset.grep()

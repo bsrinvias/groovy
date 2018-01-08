@@ -1,0 +1,12 @@
+t=1..100
+v=[]
+t.each{n->
+(2..n).each{d->
+if(n%d==0 && n!=d)
+{
+	v.add(n)
+}
+}
+}
+log.info t-v-1 //Prime numbers
+log.info v.unique() //composite numbers

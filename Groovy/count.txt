@@ -1,0 +1,5 @@
+str='This is test and need to work'
+def countWords(s) { s.split(' ').size()}
+log.info countWords(str)
+def countLines(s){s.split('\n').size()}
+log.info countLines(str)

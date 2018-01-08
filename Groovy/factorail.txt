@@ -1,0 +1,5 @@
+//Recursive program
+
+def factorial
+factorial = { it > 1 ? it * factorial(it-1) : it }
+factorial(4)

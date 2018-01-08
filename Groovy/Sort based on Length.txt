@@ -1,0 +1,7 @@
+A=['EEE','AAA','BBB','AAA','CCC','DDD','EEE','AAA','BBB','BBB','BBB','BBB']
+log.info A.class
+B=  A.countBy{it}.max{it.value}
+//log.info B.sort { it.value}
+//log.info B.sort { -it.value}
+//log.info B.max{it.value}
+//log.info A.groupBy().collectEntries{[(it.key):it.value.size()]}

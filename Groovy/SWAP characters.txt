@@ -1,0 +1,33 @@
+//string Replace
+/*A='Okey'
+def middle =((A.length())/2).toInteger()
+log.info middle
+log.info A[middle]
+log.info A.getAt(middle)
+log.info  A.substring( 0, middle) + 'B'  + A.substring(middle+1)*/
+
+//----------------------------------------------------------------------------
+//Array Strings Replace
+def names=['SREENU','VASU','RAJ','VIKRAM']
+def replaceChar = 'z'
+names.each { name->
+   def middleChar =((name.length())/2).toInteger()
+  log.info  name.substring( 0, middleChar) + replaceChar  + name.substring(middleChar+1)
+}
+
+
+
+//log.info specific characters change
+def Name=['SROONU','ZOL','ROOAJ','KORA']
+Name.eachWithIndex{it, i->
+if(it.contains('OO'))
+{
+//	log.info it
+	Name[i] =  it.replace('OO','KK')
+
+	}
+}
+log.info  Name
+
+---log.info "First Character Captial:"  A[0].toLowerCase()+A.substring(1)
+log.info "Last charact Capital:" A.reverse().drop(1).reverse()+A[-1].toLowerCase()
