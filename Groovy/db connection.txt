@@ -1,3 +1,9 @@
+create database database1;
+use database1
+create table emp(name varchar(10),id int(5))
+
+import mysql jar to eclipse;
+
 package switchOperations
 
 import groovy.sql.Sql
@@ -10,24 +16,33 @@ class databaseconnect {
 		
 		
 		
-		def url = 'jdbc:mysql://localhost/nagateja'
+		def url = 'jdbc:mysql://localhost/database1'
 		def user = 'root'
-		def password = 'root'
+		def password = 'Epam123$$'
 		def driver = 'com.mysql.jdbc.Driver'
 		def sql = Sql.newInstance(url, user, password, driver)
 		
-		//sql.execute("insert into customers values (300, 'Groovy', '1', 'Eclipse');")
+//		sql.execute("insert into emp values ('Teja',123);")
 		
-		sql.query('Select * from customers') { resultSet ->
-			while (resultSet.next()) {
-			  def id = resultSet.getString(1)
-			  def name = resultSet.getString(2)
-			  def address = resultSet.getString('Address')
-			  println "ID = $id, Name = $name, Address = $address"
-			}
-		  }
-		
+//		sql.query('Select * from emp') { resultSet ->
+//			while (resultSet.next()) {
+//				def name = resultSet.getString(1)
+//				 def id = resultSet.getString(2)
+//			 			  
+//			  println "ID = $id, Name = $name"
+//			}
+//		  }
+		sql.execute("update emp set name='Teja1' where id=123;")
+//		
 		sql.close()
 	}
 
 }
+
+
+
+create database database1;
+use database1
+create table emp(name varchar(10),id int(5))
+import jar in mysql jar in eclipse
+
