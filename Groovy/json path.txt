@@ -17,6 +17,7 @@ class GpathJason {
 		def json = new JsonSlurper().parseText(text1)
 		println "Result ${json.employee}"
 		//println json
+		//println "Result $json.employee.cars[1]"
 		
 		}
 		
