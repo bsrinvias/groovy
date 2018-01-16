@@ -15,9 +15,11 @@ class GpathJason {
 			
 		
 		def json = new JsonSlurper().parseText(text1)
-		def theNode = json.name
-		 "theNode"
-	}
+		println "Result ${json.employee}"
+		//println json
+		
+		}
+		
 
 
 }
